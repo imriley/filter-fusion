@@ -9,5 +9,5 @@ app.register_blueprint(meme_bp)
 def home():
     return redirect('https://github.com/imriley/filter-fusion/blob/main/README.md')
 
-if __name__ == '__main__':
-    app.run()
+# if __name__ == '__main__':
+#     app.run()
