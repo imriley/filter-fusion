@@ -1,11 +1,13 @@
-from flask import Flask
+from flask import Flask, redirect
+from meme import meme_bp
 
 app = Flask(__name__)
 
+app.register_blueprint(meme_bp)
+
 @app.route('/')
 def home():
-    return 'Hello, World!'
+    return redirect('https://github.com/imriley/filter-fusion/blob/main/README.md')
 
-@app.route('/about')
-def about():
-    return 'About'
+if __name__ == '__main__':
+    app.run()
