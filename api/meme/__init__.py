@@ -9,4 +9,4 @@ for filename in os.listdir(current_dir):
         continue
     module_name = filename[:-3]
     module = importlib.import_module(f'.{module_name}', package=__name__)
-    meme_bp.add_url_rule(f'/{module_name}', view_func=getattr(module, module_name))
+    meme_bp.add_url_rule(f'/{module_name}', view_func=getattr(module, module_name), methods=['GET', 'POST'])
