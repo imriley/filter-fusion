@@ -7,7 +7,6 @@ from api.utils.utils import get_image
 def resize():
     width = int(request.form.get('width'))
     height = int(request.form.get('height'))
-    print(width, height)
 
     if width is None or height is None:
         abort(400, 'Width and height parameters are required.')
